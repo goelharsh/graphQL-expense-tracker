@@ -1,14 +1,29 @@
 import { useState } from 'react'
 
+import HomePage from './pages/HomePage'
+import TransactionPage from './pages/TransactionPage'
+import SignUpPage from './pages/SignUpPage'
+import LoginPage from './pages/LoginPage'
+import NotFoundPage from './pages/NotFoundPage'
+import Header from './components/ui/Header'
+import { Route, Routes } from 'react-router-dom'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const authUser = true;
+
 
   return (
     <>
-   <h1>Harsh Goel</h1>
-      
+    { authUser && <Header/> }
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/signup" element={<SignUpPage/>} />
+        <Route path="/transaction/:id" element={<TransactionPage/>} />
+        <Route path="*" element={<NotFoundPage/>} />
+      </Routes>
+      {/* footer  */}
     </>
   )
 }

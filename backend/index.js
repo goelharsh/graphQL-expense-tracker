@@ -40,7 +40,7 @@ app.use(
     resave:false, //this option specifies whether to save the session to the store on every request or not
     saveUninitialized:false,
     cookie:{
-      maxAge:1000*60*60*24*7, // 7 days session expire
+      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days session expire
       httpOnly:true,
     },
     store:store

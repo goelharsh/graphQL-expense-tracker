@@ -48,8 +48,9 @@ const transactionResolver = {
 
 			// categoryMap = { expense: 125, investment: 100, saving: 50 }
 
+			// entries is used to convert an oject into the array 
 			return Object.entries(categoryMap).map(([category, totalAmount]) => ({ category, totalAmount }));
-			// return [ { category: "expense", totalAmount: 125 }, { category: "investment", totalAmount: 100 }, { category: "saving", totalAmount: 50 } ]
+			// return output will be:  [ { category: "expense", totalAmount: 125 }, { category: "investment", totalAmount: 100 }, { category: "saving", totalAmount: 50 } ]
 		},
 	},
 	Mutation: {

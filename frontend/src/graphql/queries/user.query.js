@@ -11,6 +11,8 @@ export const GET_AUTHENTICATED_USER = gql`
 	}
 `;
 
+
+// based on relationship concept 
 export const GET_USER_AND_TRANSACTIONS = gql`
 	query GetUserAndTransactions($userId: ID!) {
 		user(userId: $userId) {

@@ -88,6 +88,9 @@ const userResolver = {
 			}
 		},
 	},
+
+	// this is relationships concept in GRAPHQL 
+	// it is like all transaction of other user using id 
 	User: {
 		transactions: async (parent) => {
 			try {

@@ -88,6 +88,8 @@ const transactionResolver = {
 			}
 		},
 	},
+
+	// relationships concept 
 	Transaction: {
 		user: async (parent) => {
 			const userId = parent.userId;

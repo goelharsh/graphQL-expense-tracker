@@ -24,6 +24,7 @@ export const GET_TRANSACTION = gql`
 			amount
 			location
 			date
+			# relationship 
 			user {
 				name
 				username

@@ -28,13 +28,17 @@ const HomePage = () => {
 		],
 	};
 
-	const [logout, {loading}] = useMutation(LOGOUT, {
+	const [logout, {loading, client}] = useMutation(LOGOUT, {
 		refetchQueries: ["GetAuthenticatedUser"]
 	});
 
 	const handleLogout = async() => {
 		try {
 			await logout();
+
+			// we know, we are caching each and every request in this website and therefore while logging out , we have to clear the cache memory .
+			// Bcoz if we don't clear the cache then , when the different login then the tranation of other users will be displayed.
+			client.resetStore();
 		} catch (error) {
 			console.log("Error logging out: ", error);
 			toast.error(error.message);

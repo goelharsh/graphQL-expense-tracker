@@ -9,7 +9,7 @@ import { MdSignalCellularConnectedNoInternet4Bar } from 'react-icons/md'
 
 const client = new ApolloClient({
   // TODO: UODATE THE URI ON PRODUCTION 
-  uri: 'http://localhost:4000/graphql',
+  uri: import.meta.env.VITE_NODE_ENV==="development" ? "http://localhost:4000/graphql" : "/graphql" ,
   cache: new InMemoryCache(), // Apollo client uses to cahe query results after fetching them.
   credentials:"include",  //this tells Apollo Client to send cookies along with every request to the server
 });

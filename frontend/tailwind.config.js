@@ -2,7 +2,6 @@ import svgToDataUri from "mini-svg-data-uri";
 import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 
 
-const require = createRequire(import.meta.url);
 
 /** @type {import('tailwindcss').Config} */
 export default {
